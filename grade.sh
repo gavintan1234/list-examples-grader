@@ -24,7 +24,7 @@ fi
 
 java -cp $CP org.junit.runner.JUnitCore TestListExamples|head -n 2|tail -n 1 > TestOutput.txt
 
-NUMTESTS=$(grep -o '.' TestOutput.txt|wc -l)
+NUMTESTS=$(grep -o '\.' TestOutput.txt|wc -l)
 NUMFAILED=$(grep -o 'E' TestOutput.txt|wc -l)
 NUMPASSED=$(($NUMTESTS - $NUMFAILED))
 
